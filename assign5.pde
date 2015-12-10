@@ -168,11 +168,11 @@ void draw() {
       }
       for(int i=0;i<5;i++){
         image(shoot,shootX[i],shootY[i]);
-        int closestEnemy=closestEnemy(shootX[i],shootY[i]);
-        if(closestEnemy!=-1 && shootX[i]>enemyX[closestEnemy]){
-          if(enemyY[closestEnemy]>shootY[i]+1)
+        int closestEnemyNum=closestEnemy(shootX[i],shootY[i]);
+        if(closestEnemyNum!=-1 && shootX[i]>enemyX[closestEnemyNum]){
+          if(enemyY[closestEnemyNum]>shootY[i]+1)
             shootY[i]+=shootSpeed;
-          else if(enemyY[closestEnemy]<shootY[i]-1)
+          else if(enemyY[closestEnemyNum]<shootY[i]-1)
             shootY[i]-=shootSpeed;
         }
         shootX[i]-=shootSpeed;
